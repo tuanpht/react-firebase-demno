@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 
 const config = {
   apiKey: 'AIzaSyDvUbyPBJ1OUFsPrzOXYQQoyipuUzqFuEU',
@@ -15,4 +16,6 @@ firebase.initializeApp(config);
 const auth = firebase.auth();
 auth.useDeviceLanguage();
 
-export {auth};
+const db = firebase.database();
+
+export {auth, db};
